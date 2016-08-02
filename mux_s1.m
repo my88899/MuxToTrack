@@ -7,12 +7,12 @@ N=length(Ts);
 
 X_k=abs(fft(Ds,length(Ds)));
 
+figure
 % plot(X_k(1:N));
 % title('FFTģֵ')
-figure
+
 
 X_k=X_k/(N/2);
 X_k(1)=X_k(1)/2;
 F=([1:N]-1)*Fs/N;
-% f=linspace(0,Fs,length(Ds));
 plot(F(1:N/2),X_k(1:N/2));
