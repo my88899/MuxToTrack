@@ -15,8 +15,7 @@ figure
 X_k=X_k/(N/2);
 X_k(1)=X_k(1)/2;
 F=([1:N]-1)*Fs/N;
-% plot(F(1:N/2),X_k(1:N/2));
-F=F(1:floor(N/2));
-X_k=X_k(1:floor(N/2));
-plot(F,X_k);
-ff=F(find(X_k==max(X_k)));
+plot(F(1:N/2),X_k(1:N/2));
+F=F(1:N/2);
+X_k=X_k(1:N/2)
+ff=F(find(X_k==max(X_k)))
