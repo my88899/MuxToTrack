@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.23"
+    ComputedModelVersion    "1.24"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -76,9 +76,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "my88899"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Aug 02 22:11:56 2016"
-  RTWModifiedTimeStamp	  392073828
-  ModelVersionFormat	  "1.%<AutoIncrement:23>"
+  LastModifiedDate	  "Wed Aug 03 09:58:24 2016"
+  RTWModifiedTimeStamp	  392118798
+  ModelVersionFormat	  "1.%<AutoIncrement:24>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -172,7 +172,7 @@ Model {
 	Simulink.SolverCC {
 	  $ObjectID		  9
 	  Version		  "1.15.1"
-	  StartTime		  "0.0"
+	  StartTime		  "1"
 	  StopTime		  "3"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
@@ -819,7 +819,7 @@ Model {
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition     [ 367, 87, 1554, 924 ] 
+      ConfigPrmDlgPosition     [ 359, 56, 1562, 932 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -1226,7 +1226,7 @@ Model {
       "372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),'DisplayLayoutDi"
       "mensions',[4 1],'DisplayContentCache',[]),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false"
       ",'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2015b')),'Version','2015b"
-      "','Position',[-1 2 1908 990],'VisibleAtModelOpen','on')"
+      "','Position',[-1 2 1908 990])"
       NumInputPorts	      "4"
     }
     Block {
