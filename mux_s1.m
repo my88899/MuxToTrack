@@ -15,4 +15,5 @@ figure
 X_k=X_k/(N/2);
 X_k(1)=X_k(1)/2;
 F=([1:N]-1)*Fs/N;
-plot(F(1:N/2),X_k(1:N/2));
+plot(F(1:floor(N/2)),X_k(1:floor(N/2)));
+axis([1000 7000 -1 12])
