@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.18"
+    ComputedModelVersion    "1.22"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -40,7 +40,7 @@ Model {
       $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, 0.0, 1936.0, 1096.0]
+      Location		      [-8.0, -8.0, 1382.0, 784.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		4
@@ -64,9 +64,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1886.0, 918.0]
-	ZoomFactor		[1.25]
-	Offset			[60.299999999999955, 83.7199999999998]
+	Extents			[1332.0, 606.0]
+	ZoomFactor		[1.0]
+	Offset			[17.299999999999955, 65.269999999999868]
       }
     }
   }
@@ -76,9 +76,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "my88899"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Aug 05 21:44:25 2016"
-  RTWModifiedTimeStamp	  392334261
-  ModelVersionFormat	  "1.%<AutoIncrement:18>"
+  LastModifiedDate	  "Sat Aug 06 00:27:40 2016"
+  RTWModifiedTimeStamp	  392341785
+  ModelVersionFormat	  "1.%<AutoIncrement:22>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -176,7 +176,7 @@ Model {
 	  StopTime		  "t_end"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
-	  InitialStep		  "0.0000001"
+	  InitialStep		  "0.000001"
 	  MaxNumMinSteps	  "-1"
 	  MaxOrder		  5
 	  ZcThreshold		  "auto"
@@ -184,7 +184,7 @@ Model {
 	  MaxConsecutiveZCs	  "1000"
 	  ExtrapolationOrder	  4
 	  NumberNewtonIterations  1
-	  MaxStep		  "0.0000001"
+	  MaxStep		  "0.000001"
 	  MinStep		  "auto"
 	  MaxConsecutiveMinStep	  "1"
 	  RelTol		  "1e-3"
@@ -819,7 +819,7 @@ Model {
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition     [ 383, 149, 1538, 908 ] 
+      ConfigPrmDlgPosition     [ 220, 97, 1146, 648 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -890,21 +890,6 @@ Model {
   }
   BlockParameterDefaults {
     Block {
-      BlockType		      Gain
-      Gain		      "1"
-      Multiplication	      "Element-wise(K.*u)"
-      ParamMin		      "[]"
-      ParamMax		      "[]"
-      ParamDataTypeStr	      "Inherit: Same as input"
-      OutMin		      "[]"
-      OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: Same as input"
-      LockScale		      off
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	on
-      SampleTime	      "-1"
-    }
-    Block {
       BlockType		      Mux
       Inputs		      "4"
       DisplayOption	      "none"
@@ -974,7 +959,7 @@ Model {
   }
   System {
     Name		    "mix_fq_01"
-    Location		    [-8, 0, 1928, 1096]
+    Location		    [-8, -8, 1374, 776]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -986,7 +971,7 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "125"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "27"
     Block {
@@ -1079,19 +1064,6 @@ Model {
       Ph		      "0"
     }
     Block {
-      BlockType		      Gain
-      Name		      "Gain"
-      SID		      "27"
-      Position		      [630, 510, 660, 540]
-      ZOrder		      128
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      Gain		      "0.6"
-      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
       BlockType		      Mux
       Name		      "Mux"
       SID		      "25"
@@ -1139,8 +1111,8 @@ Model {
       SourceBlock	      "simulink/Sources/Repeating\nSequence"
       SourceType	      "Repeating table"
       ContentPreviewEnabled   off
-      rep_seq_t		      "[0 3]"
-      rep_seq_y		      "[0 0.03]"
+      rep_seq_t		      "[0 2]"
+      rep_seq_y		      "mt"
     }
     Block {
       BlockType		      Scope
@@ -1177,22 +1149,8 @@ Model {
       "0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0."
       "0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),'DisplayLayoutDimensions',[3 1]),extmgr.Configurat"
       "ion('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Me"
-      "asurements',true,'Version','2015b')),'Version','2015b','Position',[1 1 1920 1002],'VisibleAtModelOpen','on')"
+      "asurements',true,'Version','2015b')),'Version','2015b','Position',[-1438 460 718 363],'VisibleAtModelOpen','on')"
       NumInputPorts	      "3"
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum"
-      SID		      "26"
-      Ports		      [2, 1]
-      Position		      [600, 460, 620, 480]
-      ZOrder		      127
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|+-"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      TransportDelay
@@ -1278,10 +1236,10 @@ Model {
       DstPort		      2
     }
     Line {
-      ZOrder		      80
+      ZOrder		      129
       SrcBlock		      "AWGN\nChannel"
       SrcPort		      1
-      DstBlock		      "Sum"
+      DstBlock		      "Analog\nFilter Design1"
       DstPort		      1
     }
     Line {
@@ -1369,31 +1327,6 @@ Model {
       SrcPort		      1
       Points		      [136, 0; 0, -55]
       DstBlock		      "Scope"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      114
-      SrcBlock		      "Sum"
-      SrcPort		      1
-      Points		      [63, 0]
-      Branch {
-	ZOrder			116
-	Points			[0, 55]
-	DstBlock		"Gain"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			115
-	DstBlock		"Analog\nFilter Design1"
-	DstPort			1
-      }
-    }
-    Line {
-      ZOrder		      117
-      SrcBlock		      "Gain"
-      SrcPort		      1
-      Points		      [-15, 0]
-      DstBlock		      "Sum"
       DstPort		      2
     }
   }

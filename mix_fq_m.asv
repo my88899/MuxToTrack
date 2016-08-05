@@ -1,25 +1,40 @@
 clc;clear;close all;
 ts=0.000001;    %采样间隔
-Fs=1/ts;        %采样频率：1000000Hz=1MHz
-T=3;
 
-delay_1=0.6;
 
+
+delay_1=0.012;
+delay_2=0.037;
+
+t_start=1;
+t_end=2;
 sim('mix_fq_01.mdl')
 
+delay=max(delay_1,delay_2);
 lenB=floor(delay/ts)+2;
-Ds=ScopeData.signals(3).values(lenB:end);
 Ts=ScopeData.time(lenB:end);
-N=length(Ts);
-
-X_k=abs(fft(Ds,length(Ds)));
-
-plot(X_k(1:N));
-title('FFT模值')
+Ds_1=ScopeData.signals(3).values(lenB:end);
+[F1,X_k1]=mux_s1(Ts,Ds_1);
 figure
+plot(F1,X_k1)
 
-X_k=X_k/(N/2);
-X_k(1)=X_k(1)/2;
-F=([1:N]-1)*Fs/N;
-% f=linspace(0,Fs,length(Ds));
-plot(F(1:N/2),X_k(1:N/2));
+t_start=2;
+t_end=3;
+sim('mix_fq_01.mdl')
+
+delay=max(delay_1,delay_2);
+lenB=floor(delay/ts)+2;
+Ts=ScopeData.time(lenB:end);
+Ds_1=ScopeData.signals(3).values(lenB:end);
+[F2,X_k2]=mux_s1(Ts,Ds_1,F);
+figure
+plot(F2,X_k2)
+
+figure
+L=max(length(F1),length(F2));
+F=F2(1:L)-F1(1:L);
+
+
+
+
+% mux_s1(Ts,Ds_2);

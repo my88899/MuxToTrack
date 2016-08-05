@@ -1,0 +1,27 @@
+function [F,X_k]=mux_sl(Ts,Ds,F_o)
+ts=0.000001;    %采样间隔
+Fs=1/ts;        %采样频率：1000000Hz=1MHz
+T=3;
+
+N=length(Ts);
+
+X_k=abs(fft(Ds,length(Ds)));
+
+% plot(X_k(1:N));
+% title('FFT模值')
+figure
+
+X_k=X_k/(N/2);
+X_k(1)=X_k(1)/2;
+F=([1:N]-1)*Fs/N;
+% f=linspace(0,Fs,length(Ds));
+if isempty(F_o)
+    plot(F(1:N/2),X_k(1:N/2));
+else
+    L=max(length(F),length(F_o));
+    F=F(1:L);
+    F_o=F_o(1:L);
+    X_k=X_k(1:L);
+    plot(F(1:N/2)-F_o,X_k(1:N/2));
+end
+% axis([1000,7000,-1,12])
