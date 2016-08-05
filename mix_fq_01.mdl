@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.24"
+    ComputedModelVersion    "1.26"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -40,7 +40,7 @@ Model {
       $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, 0.0, 1936.0, 1096.0]
+      Location		      [-8.0, -8.0, 1936.0, 1096.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		4
@@ -66,7 +66,7 @@ Model {
 	LoadSaveID		"0"
 	Extents			[1886.0, 918.0]
 	ZoomFactor		[1.25]
-	Offset			[27.759993100166298, 83.7199999999998]
+	Offset			[-3.2066735665001715, 30.203333333333376]
       }
     }
   }
@@ -76,9 +76,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "my88899"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Aug 03 09:58:24 2016"
-  RTWModifiedTimeStamp	  392118798
-  ModelVersionFormat	  "1.%<AutoIncrement:24>"
+  LastModifiedDate	  "Fri Aug 05 22:04:17 2016"
+  RTWModifiedTimeStamp	  392335413
+  ModelVersionFormat	  "1.%<AutoIncrement:26>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -172,8 +172,8 @@ Model {
 	Simulink.SolverCC {
 	  $ObjectID		  9
 	  Version		  "1.15.1"
-	  StartTime		  "1"
-	  StopTime		  "3"
+	  StartTime		  "t_start"
+	  StopTime		  "t_end"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "0.000001"
@@ -819,7 +819,7 @@ Model {
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition     [ 359, 56, 1562, 932 ] 
+      ConfigPrmDlgPosition     [ 351, 40, 1570, 955 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -922,7 +922,7 @@ Model {
   }
   System {
     Name		    "mix_fq_01"
-    Location		    [-8, 0, 1928, 1096]
+    Location		    [-8, -8, 1928, 1088]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -942,7 +942,7 @@ Model {
       Name		      "AWGN\nChannel"
       SID		      "22"
       Ports		      [1, 1]
-      Position		      [460, 376, 555, 434]
+      Position		      [575, 276, 670, 334]
       ZOrder		      128
       LibraryVersion	      "1.472"
       UserDataPersistent      on
@@ -966,7 +966,7 @@ Model {
       Name		      "AWGN\nChannel1"
       SID		      "27"
       Ports		      [1, 1]
-      Position		      [460, 506, 555, 564]
+      Position		      [575, 406, 670, 464]
       ZOrder		      130
       LibraryVersion	      "1.472"
       UserDataPersistent      on
@@ -990,7 +990,7 @@ Model {
       Name		      "AWGN\nChannel2"
       SID		      "28"
       Ports		      [1, 1]
-      Position		      [460, 611, 555, 669]
+      Position		      [575, 511, 670, 569]
       ZOrder		      131
       LibraryVersion	      "1.472"
       UserDataPersistent      on
@@ -1014,7 +1014,7 @@ Model {
       Name		      "Analog\nFilter Design"
       SID		      "10"
       Ports		      [1, 1]
-      Position		      [835, 372, 900, 428]
+      Position		      [950, 272, 1015, 328]
       ZOrder		      111
       LibraryVersion	      "1.342"
       SourceBlock	      "dsparch4/Analog\nFilter Design"
@@ -1032,7 +1032,7 @@ Model {
       Name		      "Analog\nFilter Design1"
       SID		      "21"
       Ports		      [1, 1]
-      Position		      [600, 377, 665, 433]
+      Position		      [715, 277, 780, 333]
       ZOrder		      129
       LibraryVersion	      "1.342"
       SourceBlock	      "dsparch4/Analog\nFilter Design"
@@ -1050,7 +1050,7 @@ Model {
       Name		      "Analog\nFilter Design2"
       SID		      "29"
       Ports		      [1, 1]
-      Position		      [845, 502, 910, 558]
+      Position		      [960, 402, 1025, 458]
       ZOrder		      132
       LibraryVersion	      "1.342"
       SourceBlock	      "dsparch4/Analog\nFilter Design"
@@ -1068,7 +1068,7 @@ Model {
       Name		      "Analog\nFilter Design3"
       SID		      "30"
       Ports		      [1, 1]
-      Position		      [610, 507, 675, 563]
+      Position		      [725, 407, 790, 463]
       ZOrder		      134
       LibraryVersion	      "1.342"
       SourceBlock	      "dsparch4/Analog\nFilter Design"
@@ -1086,7 +1086,7 @@ Model {
       Name		      "Analog\nFilter Design4"
       SID		      "32"
       Ports		      [1, 1]
-      Position		      [845, 612, 910, 668]
+      Position		      [960, 512, 1025, 568]
       ZOrder		      135
       LibraryVersion	      "1.342"
       SourceBlock	      "dsparch4/Analog\nFilter Design"
@@ -1104,7 +1104,7 @@ Model {
       Name		      "Analog\nFilter Design5"
       SID		      "33"
       Ports		      [1, 1]
-      Position		      [610, 617, 675, 673]
+      Position		      [725, 517, 790, 573]
       ZOrder		      137
       LibraryVersion	      "1.342"
       SourceBlock	      "dsparch4/Analog\nFilter Design"
@@ -1122,7 +1122,7 @@ Model {
       Name		      "Continuous-Time\nVCO"
       SID		      "2"
       Ports		      [1, 1]
-      Position		      [140, 277, 230, 323]
+      Position		      [255, 177, 345, 223]
       ZOrder		      32
       LibraryVersion	      "1.42"
       FontName		      "Arial"
@@ -1139,7 +1139,7 @@ Model {
       Name		      "Product1"
       SID		      "15"
       Ports		      [2, 1]
-      Position		      [770, 380, 800, 415]
+      Position		      [885, 280, 915, 315]
       ZOrder		      116
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -1151,7 +1151,7 @@ Model {
       Name		      "Product2"
       SID		      "31"
       Ports		      [2, 1]
-      Position		      [780, 510, 810, 545]
+      Position		      [895, 410, 925, 445]
       ZOrder		      133
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -1163,7 +1163,7 @@ Model {
       Name		      "Product3"
       SID		      "34"
       Ports		      [2, 1]
-      Position		      [780, 620, 810, 655]
+      Position		      [895, 520, 925, 555]
       ZOrder		      136
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -1175,7 +1175,7 @@ Model {
       Name		      "Repeating\nSequence"
       SID		      "1"
       Ports		      [0, 1]
-      Position		      [65, 285, 95, 315]
+      Position		      [180, 185, 210, 215]
       ZOrder		      1
       LibraryVersion	      "1.358"
       SourceBlock	      "simulink/Sources/Repeating\nSequence"
@@ -1189,7 +1189,7 @@ Model {
       Name		      "Scope"
       SID		      "12"
       Ports		      [4]
-      Position		      [1015, 298, 1045, 332]
+      Position		      [1130, 198, 1160, 232]
       ZOrder		      113
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
@@ -1234,7 +1234,7 @@ Model {
       Name		      "Transport\nDelay"
       SID		      "3"
       Ports		      [1, 1]
-      Position		      [375, 390, 405, 420]
+      Position		      [490, 290, 520, 320]
       ZOrder		      104
       NamePlacement	      "alternate"
       DelayTime		      "delay_1"
@@ -1245,7 +1245,7 @@ Model {
       Name		      "Transport\nDelay1"
       SID		      "14"
       Ports		      [1, 1]
-      Position		      [375, 520, 405, 550]
+      Position		      [490, 420, 520, 450]
       ZOrder		      115
       NamePlacement	      "alternate"
       DelayTime		      "delay_2"
@@ -1256,7 +1256,7 @@ Model {
       Name		      "Transport\nDelay2"
       SID		      "19"
       Ports		      [1, 1]
-      Position		      [375, 625, 405, 655]
+      Position		      [490, 525, 520, 555]
       ZOrder		      120
       NamePlacement	      "alternate"
       DelayTime		      "delay_3"

@@ -5,7 +5,7 @@ c=10e1;
 
 delay_1=0.014;
 delay_2=0.014;
-delay_3=0.014;
+delay_3=0.017;
 
 t_start=1;
 t_end=2;
