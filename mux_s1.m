@@ -16,3 +16,4 @@ X_k(1)=X_k(1)/2;
 F=([1:N]-1)*Fs/N;
 % f=linspace(0,Fs,length(Ds));
 plot(F(1:N/2),X_k(1:N/2));
+% axis([1000,7000,-1,12])

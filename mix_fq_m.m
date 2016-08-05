@@ -1,8 +1,11 @@
 clc;clear;close all;
-ts=0.000001;    %采样间隔
+ts=0.0000001;    %采样间隔
 
-delay_1=0.12;
-delay_2=0.37;
+t_start=1;
+t_end=2;
+
+delay_1=0.012;
+delay_2=0.037;
 
 sim('mix_fq_01.mdl')
 
