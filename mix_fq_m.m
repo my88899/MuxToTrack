@@ -14,10 +14,11 @@ sim('mix_fq_01.mdl')
 
 delay=max(delay_1,delay_2);
 lenB=floor(delay/ts)+2;
-Ts=ScopeData.time;%(lenB:end);
-Ds_1=ScopeData.signals(3).values;%(lenB:end);
+Ts=ScopeData.time(lenB:end);
+Ds_1=ScopeData.signals(3).values(lenB:end);
 [F1,X_k1]=mux_s1(Ts,Ds_1);
 figure
+subplot(2,2,1)
 plot(F1,X_k1)
 axis([-100 500 -1 14])
 xlabel('f/Hz');ylabel('A')
@@ -29,15 +30,17 @@ sim('mix_fq_01.mdl')
 
 delay=max(delay_1,delay_2);
 lenB=floor(delay/ts)+2;
-Ts=ScopeData.time;%(lenB:end);
-Ds_1=ScopeData.signals(3).values;%(lenB:end);
+Ts=ScopeData.time(lenB:end);
+Ds_1=ScopeData.signals(3).values(lenB:end);
 [F2,X_k2]=mux_s1(Ts,Ds_1);
-figure
+% figure
+subplot(2,2,2)
 plot(F2,X_k2)
 xlabel('f/Hz');ylabel('A')
 axis([-100 500 -1 14])
 
-figure
+% figure
+subplot(2,2,[3,4])
 L=max(length(F1),length(F2));
 F=F2(1:L);
 X_k=abs(X_k2(1:L)-X_k1(1:L));
