@@ -1,5 +1,5 @@
 Model {
-  Name			  "mix_fq_01"
+  Name			  "trackMove"
   Version		  8.6
   MdlSubVersion		  0
   SavedCharacterEncoding  "GBK"
@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.26"
+    ComputedModelVersion    "1.40"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -18,7 +18,7 @@ Model {
       Type		      "Cell"
       Dimension		      2
       Cell		      "HDLSubsystem"
-      Cell		      "mix_fq_01"
+      Cell		      "trackMove"
       PropName		      "mdlProps"
     }
   }
@@ -40,7 +40,7 @@ Model {
       $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, -8.0, 1936.0, 1096.0]
+      Location		      [-8.0, 0.0, 1936.0, 1096.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		4
@@ -65,20 +65,20 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1886.0, 918.0]
-	ZoomFactor		[1.25]
-	Offset			[-3.2066735665001715, 30.203333333333376]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
       }
     }
   }
-  Created		  "Mon Jul 04 10:33:04 2016"
+  Created		  "Sat Mar 04 16:39:31 2017"
   Creator		  "my88899"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "my88899"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Aug 05 22:04:17 2016"
-  RTWModifiedTimeStamp	  392335413
-  ModelVersionFormat	  "1.%<AutoIncrement:26>"
+  LastModifiedDate	  "Mon Apr 10 14:48:00 2017"
+  RTWModifiedTimeStamp	  411259358
+  ModelVersionFormat	  "1.%<AutoIncrement:40>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -122,12 +122,12 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "base_01"
+    model_		    "trackMove"
     overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "base_01"
+      Cell		      "trackMove"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -168,15 +168,15 @@ Model {
       Version		      "1.15.1"
       Array {
 	Type			"Handle"
-	Dimension		11
+	Dimension		10
 	Simulink.SolverCC {
 	  $ObjectID		  9
 	  Version		  "1.15.1"
 	  StartTime		  "t_start"
 	  StopTime		  "t_end"
-	  AbsTol		  "auto"
+	  AbsTol		  "0.0000001"
 	  FixedStep		  "auto"
-	  InitialStep		  "0.000001"
+	  InitialStep		  "0.0000001"
 	  MaxNumMinSteps	  "-1"
 	  MaxOrder		  5
 	  ZcThreshold		  "auto"
@@ -184,7 +184,7 @@ Model {
 	  MaxConsecutiveZCs	  "1000"
 	  ExtrapolationOrder	  4
 	  NumberNewtonIterations  1
-	  MaxStep		  "0.000001"
+	  MaxStep		  "0.0000001"
 	  MinStep		  "auto"
 	  MaxConsecutiveMinStep	  "1"
 	  RelTol		  "1e-3"
@@ -723,98 +723,6 @@ Model {
 	  }
 	  HDLCActiveTab		  "0"
 	}
-	SSC.SimscapeCC {
-	  $ObjectID		  21
-	  Version		  "1.0"
-	  Array {
-	    Type		    "Cell"
-	    Dimension		    1
-	    Cell		    "Name"
-	    PropName		    "DisabledProps"
-	  }
-	  Array {
-	    Type		    "Handle"
-	    Dimension		    2
-	    MECH.SimMechanicsCC {
-	      $ObjectID		      22
-	      Version		      "1.15.1"
-	      Name		      "SimMechanics"
-	      WarnOnRedundantConstraints on
-	      WarnOnSingularInitialAssembly off
-	      ShowCutJoints	      off
-	      VisOnUpdateDiagram      off
-	      VisDuringSimulation     off
-	      EnableVisSimulationTime on
-	      VisSampleTime	      "0"
-	      DisableBodyVisControl   off
-	      ShowCG		      on
-	      ShowCS		      on
-	      ShowOnlyPortCS	      off
-	      HighlightModel	      on
-	      FramesToBeSkipped	      "0"
-	      AnimationDelay	      "3"
-	      RecordAVI		      off
-	      CompressAVI	      on
-	      AutoFitVis	      "off"
-	      EnableSelection	      on
-	      LastVizWinPosition      "[-1 -1 -1 -1]"
-	      CamPosition	      "[0 0 0]"
-	      CamTarget		      "[0 0 -1]"
-	      CamUpVector	      "[0 1 0]"
-	      CamHeight		      "-1"
-	      CamViewAngle	      "0"
-	      VisBackgroundColor      "[0.9 0.9 0.95]"
-	      DefaultBodyColor	      "[1 0 0]"
-	      MDLBodyVisualizationType "Convex hull from body CS locations"
-	      OVRRIDBodyVisualizationType "NONE"
-	    }
-	    simmechanics.ConfigurationSet {
-	      $ObjectID		      23
-	      Version		      "1.15.1"
-	      Description	      "SimMechanics 2G"
-	      Array {
-		Type			"Handle"
-		Dimension		2
-		simmechanics.DiagnosticsConfigSet {
-		  $ObjectID		  24
-		  Version		  "1.15.1"
-		  Description		  "Diagnostics"
-		  Name			  "DiagnosticsConfigSet"
-		  SimMechanicsInvalidVisualProperty "warning"
-		  SimMechanicsCrossSectionNullEdge "warning"
-		  SimMechanicsUnconnectedFramePorts "warning"
-		  SimMechanicsUnconnectedGeometryPorts "warning"
-		  SimMechanicsRedundantBlock "warning"
-		  SimMechanicsConflictingReferenceFrames "warning"
-		  SimMechanicsRigidlyBoundBlock	"error"
-		  SimMechanicsUnsatisfiedHighPriorityTargets "warning"
-		  SimMechanicsJointTargetOverSpecification "error"
-		}
-		simmechanics.ExplorerConfigSet {
-		  $ObjectID		  25
-		  Version		  "1.15.1"
-		  Description		  "Explorer"
-		  Name			  "ExplorerConfigSet"
-		  SimMechanicsOpenEditorOnUpdate on
-		}
-		PropName		"Components"
-	      }
-	      Name		      "SimMechanics2G"
-	    }
-	    PropName		    "Components"
-	  }
-	  Name			  "Simscape"
-	  EditingMode		  "Full"
-	  ExplicitSolverDiagnosticOptions "warning"
-	  GlobalZcOffDiagnosticOptions "warning"
-	  SimscapeLogType	  "none"
-	  SimscapeLogSimulationStatistics off
-	  SimscapeLogOpenViewer	  off
-	  SimscapeLogName	  "simlog"
-	  SimscapeLogDecimation	  1
-	  SimscapeLogLimitData	  on
-	  SimscapeLogDataHistory  5000
-	}
 	PropName		"Components"
       }
       Name		      "Configuration"
@@ -829,7 +737,7 @@ Model {
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    26
+    $ObjectID		    21
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -911,18 +819,22 @@ Model {
       Floating		      off
     }
     Block {
-      BlockType		      TransportDelay
-      DelayTime		      "1"
+      BlockType		      VariableTransportDelay
+      VariableDelayType	      "Variable time delay"
+      MaximumDelay	      "1"
       InitialOutput	      "0"
-      BufferSize	      "1024"
+      MaximumPoints	      "1024"
       FixedBuffer	      off
+      ZeroDelay		      off
       TransDelayFeedthrough   off
       PadeOrder		      "0"
+      AbsoluteTolerance	      "auto"
+      ContinuousStateAttributes	"''"
     }
   }
   System {
-    Name		    "mix_fq_01"
-    Location		    [-8, -8, 1928, 1088]
+    Name		    "trackMove"
+    Location		    [-8, 0, 1928, 1096]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -934,16 +846,16 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "125"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "34"
+    SIDHighWatermark	    "71"
     Block {
       BlockType		      Reference
       Name		      "AWGN\nChannel"
-      SID		      "22"
+      SID		      "19"
       Ports		      [1, 1]
-      Position		      [575, 276, 670, 334]
-      ZOrder		      128
+      Position		      [495, 186, 590, 244]
+      ZOrder		      164
       LibraryVersion	      "1.472"
       UserDataPersistent      on
       UserData		      "DataTag0"
@@ -964,10 +876,10 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "AWGN\nChannel1"
-      SID		      "27"
+      SID		      "65"
       Ports		      [1, 1]
-      Position		      [575, 406, 670, 464]
-      ZOrder		      130
+      Position		      [495, 281, 590, 339]
+      ZOrder		      210
       LibraryVersion	      "1.472"
       UserDataPersistent      on
       UserData		      "DataTag1"
@@ -987,42 +899,18 @@ Model {
     }
     Block {
       BlockType		      Reference
-      Name		      "AWGN\nChannel2"
-      SID		      "28"
-      Ports		      [1, 1]
-      Position		      [575, 511, 670, 569]
-      ZOrder		      131
-      LibraryVersion	      "1.472"
-      UserDataPersistent      on
-      UserData		      "DataTag2"
-      SourceBlock	      "commchan3/AWGN\nChannel"
-      SourceType	      "AWGN Channel"
-      ContentPreviewEnabled   off
-      InputProcessing	      "Columns as channels (frame based)"
-      seed		      "67"
-      noiseMode		      "Variance from mask"
-      EbNodB		      "10"
-      EsNodB		      "10"
-      SNRdB		      "10"
-      bitsPerSym	      "1"
-      Ps		      "1"
-      Tsym		      "1000000"
-      variance		      "1"
-    }
-    Block {
-      BlockType		      Reference
       Name		      "Analog\nFilter Design"
-      SID		      "10"
+      SID		      "22"
       Ports		      [1, 1]
-      Position		      [950, 272, 1015, 328]
-      ZOrder		      111
+      Position		      [890, 182, 955, 238]
+      ZOrder		      204
       LibraryVersion	      "1.342"
       SourceBlock	      "dsparch4/Analog\nFilter Design"
       SourceType	      "Analog Filter Design"
       method		      "Butterworth"
       filttype		      "Lowpass"
       N			      "12"
-      Wlo		      "2*pi*20000"
+      Wlo		      "2*pi*30000"
       Whi		      "80"
       Rp		      "2"
       Rs		      "40"
@@ -1030,10 +918,10 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "Analog\nFilter Design1"
-      SID		      "21"
+      SID		      "23"
       Ports		      [1, 1]
-      Position		      [715, 277, 780, 333]
-      ZOrder		      129
+      Position		      [635, 187, 700, 243]
+      ZOrder		      165
       LibraryVersion	      "1.342"
       SourceBlock	      "dsparch4/Analog\nFilter Design"
       SourceType	      "Analog Filter Design"
@@ -1048,17 +936,17 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "Analog\nFilter Design2"
-      SID		      "29"
+      SID		      "66"
       Ports		      [1, 1]
-      Position		      [960, 402, 1025, 458]
-      ZOrder		      132
+      Position		      [890, 277, 955, 333]
+      ZOrder		      214
       LibraryVersion	      "1.342"
       SourceBlock	      "dsparch4/Analog\nFilter Design"
       SourceType	      "Analog Filter Design"
       method		      "Butterworth"
       filttype		      "Lowpass"
       N			      "12"
-      Wlo		      "2*pi*20000"
+      Wlo		      "2*pi*30000"
       Whi		      "80"
       Rp		      "2"
       Rs		      "40"
@@ -1066,46 +954,10 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "Analog\nFilter Design3"
-      SID		      "30"
+      SID		      "67"
       Ports		      [1, 1]
-      Position		      [725, 407, 790, 463]
-      ZOrder		      134
-      LibraryVersion	      "1.342"
-      SourceBlock	      "dsparch4/Analog\nFilter Design"
-      SourceType	      "Analog Filter Design"
-      method		      "Butterworth"
-      filttype		      "Highpass"
-      N			      "12"
-      Wlo		      "2*pi*10000"
-      Whi		      "80"
-      Rp		      "2"
-      Rs		      "40"
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "Analog\nFilter Design4"
-      SID		      "32"
-      Ports		      [1, 1]
-      Position		      [960, 512, 1025, 568]
-      ZOrder		      135
-      LibraryVersion	      "1.342"
-      SourceBlock	      "dsparch4/Analog\nFilter Design"
-      SourceType	      "Analog Filter Design"
-      method		      "Butterworth"
-      filttype		      "Lowpass"
-      N			      "12"
-      Wlo		      "2*pi*20000"
-      Whi		      "80"
-      Rp		      "2"
-      Rs		      "40"
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "Analog\nFilter Design5"
-      SID		      "33"
-      Ports		      [1, 1]
-      Position		      [725, 517, 790, 573]
-      ZOrder		      137
+      Position		      [635, 282, 700, 338]
+      ZOrder		      211
       LibraryVersion	      "1.342"
       SourceBlock	      "dsparch4/Analog\nFilter Design"
       SourceType	      "Analog Filter Design"
@@ -1120,10 +972,10 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "Continuous-Time\nVCO"
-      SID		      "2"
+      SID		      "28"
       Ports		      [1, 1]
-      Position		      [255, 177, 345, 223]
-      ZOrder		      32
+      Position		      [175, 87, 265, 133]
+      ZOrder		      157
       LibraryVersion	      "1.42"
       FontName		      "Arial"
       SourceBlock	      "commsynccomp2/Continuous-Time\nVCO"
@@ -1137,10 +989,10 @@ Model {
     Block {
       BlockType		      Product
       Name		      "Product1"
-      SID		      "15"
+      SID		      "29"
       Ports		      [2, 1]
-      Position		      [885, 280, 915, 315]
-      ZOrder		      116
+      Position		      [805, 190, 835, 225]
+      ZOrder		      162
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       RndMeth		      "Floor"
@@ -1149,22 +1001,10 @@ Model {
     Block {
       BlockType		      Product
       Name		      "Product2"
-      SID		      "31"
+      SID		      "68"
       Ports		      [2, 1]
-      Position		      [895, 410, 925, 445]
-      ZOrder		      133
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Product3"
-      SID		      "34"
-      Ports		      [2, 1]
-      Position		      [895, 520, 925, 555]
-      ZOrder		      136
+      Position		      [805, 285, 835, 320]
+      ZOrder		      209
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       RndMeth		      "Floor"
@@ -1173,10 +1013,10 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "Repeating\nSequence"
-      SID		      "1"
+      SID		      "32"
       Ports		      [0, 1]
-      Position		      [180, 185, 210, 215]
-      ZOrder		      1
+      Position		      [100, 95, 130, 125]
+      ZOrder		      156
       LibraryVersion	      "1.358"
       SourceBlock	      "simulink/Sources/Repeating\nSequence"
       SourceType	      "Repeating table"
@@ -1185,266 +1025,236 @@ Model {
       rep_seq_y		      "[0 10]"
     }
     Block {
+      BlockType		      Reference
+      Name		      "Repeating\nSequence1"
+      SID		      "39"
+      Ports		      [0, 1]
+      Position		      [355, 225, 385, 255]
+      ZOrder		      176
+      LibraryVersion	      "1.358"
+      SourceBlock	      "simulink/Sources/Repeating\nSequence"
+      SourceType	      "Repeating table"
+      ContentPreviewEnabled   off
+      rep_seq_t		      "[0 1]"
+      rep_seq_y		      "[delay1 delay2]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Repeating\nSequence2"
+      SID		      "69"
+      Ports		      [0, 1]
+      Position		      [355, 320, 385, 350]
+      ZOrder		      212
+      LibraryVersion	      "1.358"
+      SourceBlock	      "simulink/Sources/Repeating\nSequence"
+      SourceType	      "Repeating table"
+      ContentPreviewEnabled   off
+      rep_seq_t		      "[0 1]"
+      rep_seq_y		      "[delay1 delay2]"
+    }
+    Block {
       BlockType		      Scope
       Name		      "Scope"
-      SID		      "12"
-      Ports		      [4]
-      Position		      [1130, 198, 1160, 232]
-      ZOrder		      113
+      SID		      "33"
+      Ports		      [3]
+      Position		      [1050, 112, 1080, 148]
+      ZOrder		      160
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
       "ources','WiredSimulink',true,'DataLogging',true,'DataLoggingSaveFormat','StructureWithTime'),extmgr.Configuratio"
-      "n('Visuals','Time Domain',true,'SerializedDisplays',{struct('MinYLimReal','-6.25','MaxYLimReal','6.25','YLabelRe"
-      "al','','MinYLimMag','0.00000','MaxYLimMag','6.25','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPha"
-      "se',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrde"
-      "r',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.3921568"
-      "62745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0"
-      "745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames'"
-      ",{{}},'NumLines',1,'LineNames',{{'Continuous-Time VCO'}},'ShowContent',true,'Placement',1),struct('MinYLimReal',"
-      "'-24.55422','MaxYLimReal','26.13683','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','53.41344','LegendVisib"
-      "ility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.6862745098039"
-      "22 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.62352941176470"
-      "6 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.71764705882352"
-      "9 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','L"
-      "inePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'Analog Filter Design'}},'Sho"
-      "wContent',true,'Placement',2),struct('MinYLimReal','-56.64357','MaxYLimReal','56.81096','YLabelReal','','MinYLim"
-      "Mag','0.00000','MaxYLimMag','39.96069','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'"
-      "AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0"
-      "666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0."
-      "831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.074509803921"
-      "5686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumL"
-      "ines',1,'LineNames',{{'Analog Filter Design2'}},'ShowContent',true,'Placement',3),struct('MinYLimReal','0.08369'"
-      ",'MaxYLimReal','56.81096','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','39.96069','LegendVisibility','Off"
-      "','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274"
-      "509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411"
-      "764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.2745098"
-      "03921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LineProperti"
-      "esCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'Analog Filter Design4'}},'ShowContent',"
-      "true,'Placement',4)},'DisplayPropertyDefaults',struct('YLabelReal','','AxesColor',[0 0 0],'AxesTickColor',[0.686"
-      "274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.41176"
-      "4705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831"
-      "372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),'DisplayLayoutDi"
-      "mensions',[4 1],'DisplayContentCache',[]),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false"
-      ",'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2015b')),'Version','2015b"
-      "','Position',[-1 2 1908 990])"
-      NumInputPorts	      "4"
+      "n('Visuals','Time Domain',true,'SerializedDisplays',{struct('MinYLimReal','-28.2739','MaxYLimReal','20.02956','Y"
+      "LabelReal','','MinYLimMag','0.00000','MaxYLimMag','28.2739','LegendVisibility','Off','XGrid',true,'YGrid',true,'"
+      "PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],"
+      "'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549"
+      ";0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647"
+      " 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedCha"
+      "nnelNames',{{}},'NumLines',1,'LineNames',{{'Continuous-Time VCO'}},'ShowContent',true,'Placement',1),struct('Min"
+      "YLimReal','-6.1102','MaxYLimReal','5.39603','YLabelReal','','MinYLimMag','2.18379','MaxYLimMag','19.421','Legend"
+      "Visibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.68627450"
+      "9803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411"
+      "764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058"
+      "823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel"
+      ">','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'Analog Filter Design'}}"
+      ",'ShowContent',true,'Placement',2),struct('MinYLimReal','-5.13298','MaxYLimReal','5.13062','YLabelReal','','MinY"
+      "LimMag','0','MaxYLimMag','10','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor"
+      "',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666"
+      "666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549"
+      "019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.65"
+      "0980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'"
+      "LineNames',{{'Analog Filter Design2'}},'ShowContent',true,'Placement',3)},'ShowTimeAxisLabel',true,'DisplayPrope"
+      "rtyDefaults',struct('YLabelReal','','AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.6"
+      "86274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0."
+      "0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0."
+      "0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),'DisplayLayoutDimensions',[3 1],'DisplayContentCac"
+      "he',[]),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false),extmgr.Configuration('Tools','Me"
+      "asurements',true,'Version','2015b')),'Version','2015b','Position',[1 -4 1916 998])"
+      NumInputPorts	      "3"
     }
     Block {
-      BlockType		      TransportDelay
-      Name		      "Transport\nDelay"
-      SID		      "3"
-      Ports		      [1, 1]
-      Position		      [490, 290, 520, 320]
-      ZOrder		      104
-      NamePlacement	      "alternate"
-      DelayTime		      "delay_1"
-      BufferSize	      "3000000"
+      BlockType		      VariableTransportDelay
+      Name		      "Variable\nTime Delay"
+      SID		      "37"
+      Ports		      [2, 1]
+      Position		      [415, 197, 445, 228]
+      ZOrder		      177
+      MaximumDelay	      "0.5"
+      MaximumPoints	      "4000448"
     }
     Block {
-      BlockType		      TransportDelay
-      Name		      "Transport\nDelay1"
-      SID		      "14"
-      Ports		      [1, 1]
-      Position		      [490, 420, 520, 450]
-      ZOrder		      115
-      NamePlacement	      "alternate"
-      DelayTime		      "delay_2"
-      BufferSize	      "3000000"
-    }
-    Block {
-      BlockType		      TransportDelay
-      Name		      "Transport\nDelay2"
-      SID		      "19"
-      Ports		      [1, 1]
-      Position		      [490, 525, 520, 555]
-      ZOrder		      120
-      NamePlacement	      "alternate"
-      DelayTime		      "delay_3"
-      BufferSize	      "3000000"
+      BlockType		      VariableTransportDelay
+      Name		      "Variable\nTime Delay1"
+      SID		      "70"
+      Ports		      [2, 1]
+      Position		      [415, 292, 445, 323]
+      ZOrder		      213
+      MaximumDelay	      "0.5"
+      MaximumPoints	      "4000448"
     }
     Line {
-      ZOrder		      1
+      ZOrder		      30
       SrcBlock		      "Repeating\nSequence"
       SrcPort		      1
       DstBlock		      "Continuous-Time\nVCO"
       DstPort		      1
     }
     Line {
-      ZOrder		      18
-      SrcBlock		      "Analog\nFilter Design"
-      SrcPort		      1
-      Points		      [60, 0; 0, -90]
-      DstBlock		      "Scope"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      38
-      SrcBlock		      "Product1"
-      SrcPort		      1
-      DstBlock		      "Analog\nFilter Design"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      111
-      SrcBlock		      "Transport\nDelay"
+      ZOrder		      65
+      SrcBlock		      "Variable\nTime Delay"
       SrcPort		      1
       DstBlock		      "AWGN\nChannel"
       DstPort		      1
     }
     Line {
-      ZOrder		      97
+      ZOrder		      34
       SrcBlock		      "Analog\nFilter Design1"
       SrcPort		      1
       DstBlock		      "Product1"
       DstPort		      2
     }
     Line {
-      ZOrder		      98
+      ZOrder		      35
       SrcBlock		      "AWGN\nChannel"
       SrcPort		      1
       DstBlock		      "Analog\nFilter Design1"
       DstPort		      1
     }
     Line {
-      ZOrder		      107
-      SrcBlock		      "Transport\nDelay1"
+      ZOrder		      67
+      SrcBlock		      "Repeating\nSequence1"
+      SrcPort		      1
+      Points		      [7, 0; 0, -20]
+      DstBlock		      "Variable\nTime Delay"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      133
+      SrcBlock		      "Product1"
+      SrcPort		      1
+      DstBlock		      "Analog\nFilter Design"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      134
+      SrcBlock		      "Analog\nFilter Design"
+      SrcPort		      1
+      Points		      [43, 0; 0, -80]
+      DstBlock		      "Scope"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      157
+      SrcBlock		      "Variable\nTime Delay1"
       SrcPort		      1
       DstBlock		      "AWGN\nChannel1"
       DstPort		      1
     }
     Line {
-      ZOrder		      108
-      SrcBlock		      "Transport\nDelay2"
-      SrcPort		      1
-      DstBlock		      "AWGN\nChannel2"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      121
-      SrcBlock		      "Analog\nFilter Design2"
-      SrcPort		      1
-      Points		      [61, 0; 0, -210]
-      DstBlock		      "Scope"
-      DstPort		      3
-    }
-    Line {
-      ZOrder		      115
-      SrcBlock		      "Product2"
-      SrcPort		      1
-      DstBlock		      "Analog\nFilter Design2"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      116
+      ZOrder		      158
       SrcBlock		      "Analog\nFilter Design3"
       SrcPort		      1
       DstBlock		      "Product2"
       DstPort		      2
     }
     Line {
-      ZOrder		      118
+      ZOrder		      159
       SrcBlock		      "AWGN\nChannel1"
       SrcPort		      1
       DstBlock		      "Analog\nFilter Design3"
       DstPort		      1
     }
     Line {
-      ZOrder		      2
+      ZOrder		      160
+      SrcBlock		      "Repeating\nSequence2"
+      SrcPort		      1
+      Points		      [7, 0; 0, -20]
+      DstBlock		      "Variable\nTime Delay1"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      54
       SrcBlock		      "Continuous-Time\nVCO"
       SrcPort		      1
       Points		      [22, 0]
       Branch {
-	ZOrder			15
+	ZOrder			66
+	Points			[0, 95]
+	Branch {
+	  ZOrder		  170
+	  Points		  [0, 95]
+	  DstBlock		  "Variable\nTime Delay1"
+	  DstPort		  1
+	}
+	Branch {
+	  ZOrder		  168
+	  DstBlock		  "Variable\nTime Delay"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	ZOrder			53
 	Points			[455, 0]
 	Branch {
-	  ZOrder		  41
-	  Points		  [0, 90; 1, 0]
+	  ZOrder		  52
+	  Points		  [0, 90]
 	  Branch {
-	    ZOrder		    120
-	    Points		    [0, 130]
-	    Branch {
-	      ZOrder		      129
-	      Points		      [0, 110]
-	      DstBlock		      "Product3"
-	      DstPort		      1
-	    }
-	    Branch {
-	      ZOrder		      128
-	      DstBlock		      "Product2"
-	      DstPort		      1
-	    }
+	    ZOrder		    167
+	    Points		    [0, 95]
+	    DstBlock		    "Product2"
+	    DstPort		    1
 	  }
 	  Branch {
-	    ZOrder		    119
+	    ZOrder		    166
 	    DstBlock		    "Product1"
 	    DstPort		    1
 	  }
 	}
 	Branch {
-	  ZOrder		  40
+	  ZOrder		  47
+	  Points		  [268, 0; 0, 10]
 	  DstBlock		  "Scope"
 	  DstPort		  1
 	}
       }
-      Branch {
-	ZOrder			5
-	Points			[0, 105]
-	Branch {
-	  ZOrder		  30
-	  Points		  [0, 130]
-	  Branch {
-	    ZOrder		    84
-	    Points		    [0, 105]
-	    DstBlock		    "Transport\nDelay2"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    74
-	    DstBlock		    "Transport\nDelay1"
-	    DstPort		    1
-	  }
-	}
-	Branch {
-	  ZOrder		  29
-	  DstBlock		  "Transport\nDelay"
-	  DstPort		  1
-	}
-      }
     }
     Line {
-      ZOrder		      130
-      SrcBlock		      "Analog\nFilter Design4"
+      ZOrder		      163
+      SrcBlock		      "Product2"
       SrcPort		      1
-      Points		      [75, 0; 0, -310]
+      DstBlock		      "Analog\nFilter Design2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      165
+      SrcBlock		      "Analog\nFilter Design2"
+      SrcPort		      1
+      Points		      [67, 0; 0, -165]
       DstBlock		      "Scope"
-      DstPort		      4
-    }
-    Line {
-      ZOrder		      124
-      SrcBlock		      "Product3"
-      SrcPort		      1
-      DstBlock		      "Analog\nFilter Design4"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      125
-      SrcBlock		      "Analog\nFilter Design5"
-      SrcPort		      1
-      DstBlock		      "Product3"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      127
-      SrcBlock		      "AWGN\nChannel2"
-      SrcPort		      1
-      Points		      [18, 0; 0, 5]
-      DstBlock		      "Analog\nFilter Design5"
-      DstPort		      1
+      DstPort		      3
     }
   }
 }
 MatData {
-  NumRecords		  3
+  NumRecords		  2
   DataRecord {
     Tag			    DataTag0
     Data		    "  %)30     .    B     8    (     @         %    \"     $    !     0         %  0 $P    $    3    :&%S26"
@@ -1452,11 +1262,6 @@ MatData {
   }
   DataRecord {
     Tag			    DataTag1
-    Data		    "  %)30     .    B     8    (     @         %    \"     $    !     0         %  0 $P    $    3    :&%S26"
-    "YH97)I=&5D3W!T:6]N        #@   #     &    \"     D\"        !0    @    !     0    $          @ !  $    "
-  }
-  DataRecord {
-    Tag			    DataTag2
     Data		    "  %)30     .    B     8    (     @         %    \"     $    !     0         %  0 $P    $    3    :&%S26"
     "YH97)I=&5D3W!T:6]N        #@   #     &    \"     D\"        !0    @    !     0    $          @ !  $    "
   }

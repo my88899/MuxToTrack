@@ -1,4 +1,4 @@
-function ff=mux_sl(Ts,Ds)
+function [F;X_k]=muxTrackMove(Ts,Ds)
 ts=0.000001;    %采样间隔
 Fs=1/ts;        %采样频率：1000000Hz=1MHz
 T=3;
@@ -20,4 +20,4 @@ F=F(1:floor(N/2));
 X_k=X_k(1:floor(N/2));
 plot(F,X_k);
 axis([0 7000 -1 14])
-ff=F(find(X_k==max(X_k)));
+% ff=F(find(X_k==max(X_k)));
