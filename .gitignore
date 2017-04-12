@@ -1,7 +1,11 @@
 
-.*
-!.m
-!.mdl
-!.jpg
+
+*.*
+
 !.gitignore
-/.gtm/
+!*.m
+
+!*.mdl
+
+!*.jpg
+

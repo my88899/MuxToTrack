@@ -4,39 +4,34 @@ sweep=100000/0.1;
 c=10e1;
 
 
-oSite = {[-0.13 0], [0.13 0]};
+oSite = {[-0.04 0], [0.04 0]};
 td = 0:0.1:pi+0.3;
 x={};y={};value={};
-for k=0:1:20
+r={};v={};
+for k=0:1:5
 %     t_start=0+0.3*k;
 %     t_end=0.2+0.3*k;
     t_start=0;
     t_end=0.2;
-    delay1=0.001+0.001*k;
-    delay2=0.0014+0.001*k;
+    delay1=0.04+0.02*k;
+    delay2=0.06+0.02*k;
 
     
     sim('trackMove.mdl')
     
-    % load trackData;
-    % load trackDataWithoutButter
-    % load ScopedataTp01
-
     Ts=ScopeData.time;
     Ds=[];ff={};V={};r_simulink={};
     for i=1:2
         Ds=ScopeData.signals(i+1).values;
         [ff{i},V{i}]=muxTrackMove(Ts,Ds);
+        title(i+2*k);
         r_simulink{i}=(ff{i}./sweep).*c;
-%         V{i} = V{i} / max(V{i});
+        V{i} = V{i} / max(V{i});    %πÈ“ªªØ
+        r{i+2*k} = r_simulink{i};
+        v{i+2*k} = V{i};
     end
    
-   
-
     for i=1:2
-        deleteSites = find(V{i}<mean(V{i}));
-        r_simulink{i}(deleteSites) = [];
-        V{i}(deleteSites) = [];
         x{i+2*k} = r_simulink{i}' * cos(td) + oSite{i}(1);
         y{i+2*k} = r_simulink{i}' * sin(td) + oSite{i}(2);
         value{i+2*k} = V{i} * ones(1,length(td));
@@ -45,8 +40,8 @@ for k=0:1:20
     end
 end
     
-pointNumber=500;
-minx=0.5;maxx=-0.5;miny=2;maxy=0;
+pointNumber=400;
+minx=0.4;maxx=-0.4;miny=0;maxy=1;
 % minx=inf;maxx=-inf;miny=inf;maxy=-inf;
 % for j=1:length(x)
 %     minx=min(minx,min(x{j}));
@@ -58,9 +53,10 @@ minx=0.5;maxx=-0.5;miny=2;maxy=0;
 %     miny=min(min(y{1}),min(y{2}));maxy=max(max(x{1}),max(x{2}));
 [X,Y]=meshgrid(linspace(minx,maxx,pointNumber),linspace(miny,maxy,pointNumber));
 Zp={};
+oCubic = zeros(size(X));
 for i = 1:length(x)/2
-    Z=zeros(size(X));
-    for j=0:1
+    Z = oCubic;
+    for j=0:1 
         Z=Z+griddata(x{i*2+j-1},y{i*2+j-1},value{i*2+j-1},X,Y,'nearest');
         n=(i-1)*2+(j+1)
         
@@ -72,24 +68,21 @@ end
 %     % Zp(find(Zp<mean(mean(Zp))))=0;
 %     Zp(find(Zp<max(max(Zp))-0.3))=0;
 Z_p=Zp;
-Z=zeros(size(X));
+% Z=zeros(size(X));
 figure
 hold on
 colorbar
+% axis([minx maxx miny maxy])
+axis([-0.4 0.4 0 1])
+grid on
 for i = 1:length(Z_p);
-%     Z_p{i}(find(Z_p{i}<max(max(Z_p{i}))-0.2))=0;
+%     Z_p{i}(find(Z_p{i}<mean(mean(Z_p{i}))-0.2))=0;
+%     Z_p{i}(find(Z_p{i}<1))=0;
 %     Z = Z+Z_p{i};
 %     mesh(X,Y,Z)
     mesh(X,Y,Z_p{i})
-    axis([-0.5 0.5 0 2])
-    pause(1)
+    pause(1);
 end
-% figure
-% hold on
-grid on
-% mesh(X,Y,Z)
-% axis([-2 2 0 5])
-% colorbar
 hold off
 
     % % p={[0 -1 0],[0 1 0],[0 0 1]};
@@ -127,4 +120,4 @@ hold off
     % ot=roll_cross(p,r_simulink);
     % plot3(ot.X,ot.Y,ot.Z,'.k','MarkerSize',50);
     % view([1 0 0])
-    hold off
+    % hold off

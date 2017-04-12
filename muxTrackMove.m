@@ -1,4 +1,4 @@
-function [F;X_k]=muxTrackMove(Ts,Ds)
+function [F,X_k]=muxTrackMove(Ts,Ds)
 ts=0.000001;    %采样间隔
 Fs=1/ts;        %采样频率：1000000Hz=1MHz
 T=3;
