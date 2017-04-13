@@ -13,7 +13,7 @@ for k=0:1:5
 %     t_end=0.2+0.3*k;
     t_start=0;
     t_end=0.2;
-    delay1=0.04+0.02*k;
+    delay1=0.02+0.02*k;
     delay2=0.06+0.02*k;
 
     
