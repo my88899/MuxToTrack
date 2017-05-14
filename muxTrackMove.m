@@ -19,5 +19,5 @@ F=([1:N]-1)*Fs/N;
 F=F(1:floor(N/2));
 X_k=X_k(1:floor(N/2));
 plot(F,X_k);
-axis([0 7000 -1 14])
+axis([300 3000 -1 7])
 % ff=F(find(X_k==max(X_k)));

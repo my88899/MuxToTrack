@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.43"
+    ComputedModelVersion    "1.44"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -65,8 +65,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1886.0, 918.0]
-	ZoomFactor		[0.86646884272997016]
-	Offset			[-121.08904109589048, -92.999999999999943]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
       }
     }
   }
@@ -76,9 +76,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "my88899"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Apr 12 12:57:57 2017"
-  RTWModifiedTimeStamp	  413902649
-  ModelVersionFormat	  "1.%<AutoIncrement:43>"
+  LastModifiedDate	  "Tue Apr 25 09:52:22 2017"
+  RTWModifiedTimeStamp	  415014676
+  ModelVersionFormat	  "1.%<AutoIncrement:44>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -727,7 +727,7 @@ Model {
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition     [ 351, 40, 1570, 955 ] 
+      ConfigPrmDlgPosition     [ 343, 40, 1578, 994 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -846,7 +846,7 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "87"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "92"
     Block {
@@ -1111,6 +1111,10 @@ Model {
       MaximumPoints	      "5000448"
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      30
       SrcBlock		      "Repeating\nSequence"
       SrcPort		      1
@@ -1118,6 +1122,10 @@ Model {
       DstPort		      1
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      65
       SrcBlock		      "Variable\nTime Delay"
       SrcPort		      1
@@ -1125,6 +1133,10 @@ Model {
       DstPort		      1
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      34
       SrcBlock		      "Analog\nFilter Design1"
       SrcPort		      1
@@ -1132,6 +1144,10 @@ Model {
       DstPort		      2
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      35
       SrcBlock		      "AWGN\nChannel"
       SrcPort		      1
@@ -1139,6 +1155,10 @@ Model {
       DstPort		      1
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      67
       SrcBlock		      "Repeating\nSequence1"
       SrcPort		      1
@@ -1147,6 +1167,10 @@ Model {
       DstPort		      2
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      133
       SrcBlock		      "Product1"
       SrcPort		      1
@@ -1154,6 +1178,10 @@ Model {
       DstPort		      1
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      134
       SrcBlock		      "Analog\nFilter Design"
       SrcPort		      1
@@ -1162,6 +1190,10 @@ Model {
       DstPort		      2
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      157
       SrcBlock		      "Variable\nTime Delay1"
       SrcPort		      1
@@ -1169,6 +1201,10 @@ Model {
       DstPort		      1
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      158
       SrcBlock		      "Analog\nFilter Design3"
       SrcPort		      1
@@ -1176,6 +1212,10 @@ Model {
       DstPort		      2
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      159
       SrcBlock		      "AWGN\nChannel1"
       SrcPort		      1
@@ -1183,6 +1223,10 @@ Model {
       DstPort		      1
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      160
       SrcBlock		      "Repeating\nSequence2"
       SrcPort		      1
@@ -1191,6 +1235,10 @@ Model {
       DstPort		      2
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      163
       SrcBlock		      "Product2"
       SrcPort		      1
@@ -1198,6 +1246,10 @@ Model {
       DstPort		      1
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      165
       SrcBlock		      "Analog\nFilter Design2"
       SrcPort		      1
@@ -1206,6 +1258,10 @@ Model {
       DstPort		      3
     }
     Line {
+      FontName		      "Helvetica"
+      FontSize		      9
+      FontWeight	      "normal"
+      FontAngle		      "normal"
       ZOrder		      54
       SrcBlock		      "Continuous-Time\nVCO"
       SrcPort		      1
